@@ -179,12 +179,13 @@
 
         <!-- Card List Items -->
         <!-- Note: The MJML framework does not have a list-item component, so you will have to style the list items manually -->
-        <!-- Note: the '&#149;' is the unicode for a bullet point sized black circle -->
-        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#149; Lorem, ipsum dolor</mj-text>
-        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#149; sit amet consectetur</mj-text>
-        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#149; adipisicing elit. Quidem</mj-text>
+        <!-- Note: the '&#8226;' is the unicode for a bullet point sized black circle -->
+        <!-- Note: Some email clients does not support unicodes. Use HTML entities instead -->
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#8226; Lorem, ipsum dolor</mj-text>
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#8226; sit amet consectetur</mj-text>
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#8226; adipisicing elit. Quidem</mj-text>
         <mj-text mj-class="text-light" font-size="12px" line-height="1.75" padding-bottom="16px"
-          >&#149; quos recusandae laudantium</mj-text
+          >&#8226; quos recusandae laudantium</mj-text
         >
 
         <!-- Card Description (Bottom) -->
@@ -346,16 +347,12 @@
         border="8px solid slateblue"
         vertical-align="middle"
       >
-        <mj-text
-          mj-class="primary-color"
-          font-family="Font Awesome 5 Brands"
-          font-size="20px"
-          vertical-align="middle"
-          align="right"
-        >
-          <span
+        <mj-text font-family="Font Awesome 5 Brands" font-size="20px" vertical-align="middle" align="right">
+          <a
+            href="#"
             style="
               font-family: 'Font Awesome 5 Brands';
+              text-decoration: none;
               display: inline-block;
               background-color: white;
               line-height: 28px;
@@ -365,12 +362,15 @@
               margin-left: 8px;
               text-align: center;
               vertical-align: middle;
+              color: slateblue;
             "
-            >&#xf39e;</span
+            >&#xf39e;</a
           >
-          <span
+          <a
+            href="#"
             style="
               font-family: 'Font Awesome 5 Brands';
+              text-decoration: none;
               display: inline-block;
               background-color: white;
               line-height: 28px;
@@ -380,12 +380,15 @@
               margin-left: 8px;
               text-align: center;
               vertical-align: middle;
+              color: slateblue;
             "
-            >&#xf173;</span
+            >&#xf173;</a
           >
-          <span
+          <a
+            href="#"
             style="
               font-family: 'Font Awesome 5 Brands';
+              text-decoration: none;
               display: inline-block;
               background-color: white;
               line-height: 28px;
@@ -395,12 +398,15 @@
               margin-left: 8px;
               text-align: center;
               vertical-align: middle;
+              color: slateblue;
             "
-            >&#xf231;</span
+            >&#xf231;</a
           >
-          <span
+          <a
+            href="#"
             style="
               font-family: 'Font Awesome 5 Brands';
+              text-decoration: none;
               display: inline-block;
               background-color: white;
               line-height: 28px;
@@ -410,8 +416,9 @@
               margin-left: 8px;
               text-align: center;
               vertical-align: middle;
+              color: slateblue;
             "
-            >&#xf099;</span
+            >&#xf099;</a
           >
         </mj-text>
       </mj-column>
