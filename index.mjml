@@ -80,7 +80,9 @@
     </mj-attributes>
 
     <!-- NOTE: 'mj-style' tag is the HTML <style> tag -->
-    <mj-style> </mj-style>
+    <mj-style>
+      @media(max-width:600px){ *{ margin: auto !important; text-align: center !important; word-break: normal;} }
+    </mj-style>
   </mj-head>
 
   <!-- NOTE: 'mj-body' tag is the HTML <body> tag -->
