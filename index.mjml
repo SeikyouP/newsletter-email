@@ -1,0 +1,421 @@
+<mjml>
+  <!-- NOTE: 'mj-head' tag is the HTML <head> tag -->
+  <mj-head>
+    <!-- Title (The 'mj-title' tag is the HTML <title> tag) -->
+    <mj-title>MJML Client</mj-title>
+
+    <!-- Note: The 'mj-font' is used to import fonts -->
+    <!-- Import Google Fonts -->
+    <mj-font
+      name="Google Fonts"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    />
+
+    <!-- Import Font Awesome -->
+    <mj-font
+      name="Font Awesome 5 Brands"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css"
+    />
+    <mj-font
+      name="Font Awesome 5 Free"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css"
+    />
+
+    <!-- Declare which breakpoint the layout should go desktop/mobile -->
+    <mj-breakpoint width="600px" />
+
+    <!-- Note: The 'mj-attributes' tag overrides default settings -->
+    <!-- Note: The 'mj-attributes' tag affects one MJML component (Local Scope) -->
+    <!-- Example: 'mj-text', 'mj-image', 'mj-button', 'mj-section', etc -->
+    <mj-attributes>
+      <!-- Use Google Fonts Globally (Global Scope) -->
+      <!-- Note: The 'mj-all' tag affects all MJML components (Global Scope)  -->
+      <!-- So basically it affects EVERY component in the entire MJML document -->
+      <mj-all font-family="Open Sans, sans-serif" />
+
+      <!-- Set Global Text Resets -->
+      <mj-text padding="0px" line-height="1"> </mj-text>
+
+      <!-- Set Global Image Resets -->
+      <!-- Note: the 'fluid-on-mobile' attribute sets the image/video to full width on mobile display. Even if the width is set -->
+      <mj-image padding="0px" fluid-on-mobile="true" />
+
+      <!-- Set Global Button Resets -->
+      <mj-button href="#" padding="0" border-radius="0" text-transform="uppercase" font-weight="700"> </mj-button>
+
+      <!-- Set Global Section Resets -->
+      <mj-section padding="0px"> </mj-section>
+
+      <!-- Note: Think 'mj-class' as declaring variables/mixins/custom properies -->
+      <!-- To apply them, use mj-class="<name>" syntax" -->
+
+      <!-- Declare 'Variables' -->
+      <mj-class name="primary-color" color="slateblue" />
+      <mj-class name="secondary-color" color="#666666" />
+      <mj-class name="primary-bg" background-color="slateblue" />
+      <mj-class name="secondary-bg" background-color="#666666" />
+      <mj-class name="text-light" color="white" />
+      <mj-class name="text-dark" color="black" />
+
+      <!-- Declare 'Mixins' -->
+      <mj-class
+        name="hero-button"
+        border="2px solid white"
+        background-color="transparent"
+        font-size="16px"
+        inner-padding="8px 16px"
+        letter-spacing="1px"
+        line-height="1"
+      />
+
+      <mj-class
+        name="card-button"
+        border="1px solid white"
+        background-color="slateblue"
+        font-size="12px"
+        inner-padding="4px 8px"
+        letter-spacing="0px"
+        line-height="1.25"
+      />
+    </mj-attributes>
+
+    <!-- NOTE: 'mj-style' tag is the HTML <style> tag -->
+    <mj-style> </mj-style>
+  </mj-head>
+
+  <!-- NOTE: 'mj-body' tag is the HTML <body> tag -->
+  <mj-body background-color="#fff">
+    <!-- NOTE: 'mj-section' tags are for ROWS -->
+    <!-- NOTE: 'mj-column' tags are for COLUMNS -->
+
+    <!-- Start of Hero Section -->
+
+    <mj-hero
+      mode="fluld-height"
+      background-width="600px"
+      background-height="100%"
+      background-url="img/house_hero.png"
+      background-color="slateblue"
+      padding-top="32px"
+      padding-bottom="56px"
+      padding-left="48px"
+      padding-right="48px"
+    >
+      <!-- Top Logo -->
+      <mj-text mj-class="text-light" align="center" font-weight="700" font-size="64px" text-transform="uppercase">
+        Sei
+      </mj-text>
+
+      <!-- Bottom Logo -->
+      <mj-text mj-class="text-light" align="center" font-size="12px" text-transform="uppercase" letter-spacing="4px">
+        Residences
+      </mj-text>
+
+      <!-- Hero Title -->
+      <mj-text
+        mj-class="text-light"
+        align="center"
+        text-transform="uppercase"
+        font-weight="700"
+        font-size="48px"
+        padding-top="32px"
+        padding-bottom="32px"
+      >
+        Modern Housing For Everyone
+      </mj-text>
+
+      <!-- Hero Button -->
+      <mj-button mj-class="hero-button"> Subscribe Now </mj-button>
+    </mj-hero>
+    <!-- End of Hero Section -->
+
+    <!-- Start of Heading A -->
+    <mj-section>
+      <mj-column mj-class="secondary-bg">
+        <mj-text
+          mj-class="text-light"
+          align="center"
+          text-transform="uppercase"
+          padding-top="24px"
+          padding-bottom="24px"
+          padding-left="16px"
+          padding-right="16px"
+          font-weight="900"
+          font-size="24px"
+          letter-spacing="1px"
+          line-height="1.25"
+        >
+          Where style meets comfort
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- End of Heading A -->
+
+    <!-- Start of Section A -->
+    <mj-section>
+      <!-- Left Column -->
+      <mj-column
+        mj-class="primary-bg"
+        padding-top="32px"
+        padding-bottom="32px"
+        padding-left="32px"
+        padding-right="32px"
+      >
+        <!-- Card Title -->
+        <mj-text
+          mj-class="text-light"
+          text-transform="uppercase"
+          font-size="16px"
+          font-weight="700"
+          padding-bottom="16px"
+        >
+          Contemporary Design
+        </mj-text>
+
+        <!-- Card Description (Top) -->
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.25" padding-bottom="18px">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </mj-text>
+
+        <!-- Card List Items -->
+        <!-- Note: The MJML framework does not have a list-item component, so you will have to style the list items manually -->
+        <!-- Note: the '&#149;' is the unicode for a bullet point sized black circle -->
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#149; Lorem, ipsum dolor</mj-text>
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#149; sit amet consectetur</mj-text>
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75">&#149; adipisicing elit. Quidem</mj-text>
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.75" padding-bottom="16px"
+          >&#149; quos recusandae laudantium</mj-text
+        >
+
+        <!-- Card Description (Bottom) -->
+        <mj-text mj-class="text-light" font-size="12px" line-height="1.25" padding-bottom="16px">
+          it amet consectetur adipisicing elit.
+        </mj-text>
+
+        <!-- Card Button -->
+        <mj-button mj-class="card-button" align="left"> Read More </mj-button>
+      </mj-column>
+
+      <!-- Card Image -->
+      <mj-column>
+        <mj-image src="img/house_1.jpg" alt="house_1" height="300px" />
+      </mj-column>
+    </mj-section>
+    <!-- End of Section A -->
+
+    <!-- Start of Heading B -->
+    <mj-section>
+      <mj-column mj-class="secondary-bg">
+        <mj-text
+          mj-class="text-light"
+          align="center"
+          text-transform="uppercase"
+          padding-top="24px"
+          padding-bottom="24px"
+          padding-left="16px"
+          padding-right="16px"
+          font-weight="900"
+          font-size="24px"
+          letter-spacing="1px"
+          line-height="1.25"
+        >
+          Good price, better living
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- End of Heading B -->
+
+    <!-- Start of Section B -->
+    <mj-section direction="rtl">
+      <mj-column padding-top="32px" padding-bottom="32px" padding-left="32px" padding-right="32px">
+        <!-- Card Title -->
+        <mj-text
+          mj-class="text-dark"
+          text-transform="uppercase"
+          font-size="16px"
+          font-weight="700"
+          padding-bottom="16px"
+        >
+          Neo Classicals
+        </mj-text>
+
+        <!-- Card Description (Top) -->
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.25" padding-bottom="18px">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </mj-text>
+
+        <!-- Card List Items -->
+        <!-- Note: The MJML framework does not have a list-item component, so you will have to style the list items manually -->
+        <!-- Note: the '&#149;' is the unicode for a bullet point sized black circle -->
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75">&#149; Lorem, ipsum dolor</mj-text>
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75">&#149; sit amet consectetur</mj-text>
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75">&#149; adipisicing elit. Quidem</mj-text>
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75" padding-bottom="16px"
+          >&#149; quos recusandae laudantium</mj-text
+        >
+
+        <!-- Card Description (Bottom) -->
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.25" padding-bottom="16px">
+          it amet consectetur adipisicing elit.
+        </mj-text>
+
+        <!-- Card Button -->
+        <mj-button mj-class="card-button" align="left"> Read More </mj-button>
+      </mj-column>
+
+      <!-- Card Image -->
+      <mj-column>
+        <mj-image src="img/house_2.jpg" alt="house_2" height="300px" />
+      </mj-column>
+    </mj-section>
+    <!-- End of Section B -->
+
+    <!-- Start of Section C -->
+    <mj-section>
+      <mj-column padding-top="32px" padding-bottom="32px" padding-left="32px" padding-right="32px">
+        <!-- Card Title -->
+        <mj-text
+          mj-class="text-dark"
+          text-transform="uppercase"
+          font-size="16px"
+          font-weight="700"
+          padding-bottom="16px"
+        >
+          Premium Real Estates
+        </mj-text>
+
+        <!-- Card Description (Top) -->
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.25" padding-bottom="16px">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </mj-text>
+
+        <!-- Card List Items -->
+        <!-- Note: The MJML framework does not have a list-item component, so you will have to style the list items manually -->
+        <!-- Note: the '&#149;' is the unicode for a bullet point sized black circle -->
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75">&#149; Lorem, ipsum dolor</mj-text>
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75">&#149; sit amet consectetur</mj-text>
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75">&#149; adipisicing elit. Quidem</mj-text>
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.75" padding-bottom="16px"
+          >&#149; quos recusandae laudantium</mj-text
+        >
+
+        <!-- Card Description (Bottom) -->
+        <mj-text mj-class="text-dark" font-size="12px" line-height="1.25" padding-bottom="18px">
+          it amet consectetur adipisicing elit.
+        </mj-text>
+
+        <!-- Card Button -->
+        <mj-button mj-class="card-button" align="left"> Read More </mj-button>
+      </mj-column>
+
+      <!-- Card Image -->
+      <mj-column>
+        <mj-image src="img/house_3.jpg" alt="house_3" height="300px" />
+      </mj-column>
+    </mj-section>
+    <!-- End of Section C -->
+
+    <!-- Start of Footer Section -->
+    <mj-section>
+      <!-- Footer Logo -->
+      <mj-column
+        mj-class="secondary-bg"
+        padding-top="32px"
+        padding-bottom="32px"
+        padding-left="32px"
+        padding-right="32px"
+        vertical-align="middle"
+      >
+        <!-- Footer Logo (Top) -->
+        <mj-text mj-class="text-light" text-transform="uppercase" font-size="40px" font-weight="700" line-height="1">
+          Sei</mj-text
+        >
+        <!-- Footer Logo (Bottom) -->
+        <mj-text mj-class="text-light" text-transform="uppercase" font-size="12px" line-height="1" letter-spacing="2px"
+          >Residences</mj-text
+        >
+      </mj-column>
+
+      <!-- Footer Social -->
+      <mj-column
+        mj-class="primary-bg"
+        padding-top="32px"
+        padding-bottom="32px"
+        padding-left="32px"
+        padding-right="32px"
+        border="8px solid slateblue"
+        vertical-align="middle"
+      >
+        <mj-text
+          mj-class="primary-color"
+          font-family="Font Awesome 5 Brands"
+          font-size="20px"
+          vertical-align="middle"
+          align="right"
+        >
+          <span
+            style="
+              font-family: 'Font Awesome 5 Brands';
+              display: inline-block;
+              background-color: white;
+              line-height: 28px;
+              width: 28px;
+              border-radius: 50%;
+              padding: 4px;
+              margin-left: 8px;
+              text-align: center;
+              vertical-align: middle;
+            "
+            >&#xf39e;</span
+          >
+          <span
+            style="
+              font-family: 'Font Awesome 5 Brands';
+              display: inline-block;
+              background-color: white;
+              line-height: 28px;
+              width: 28px;
+              border-radius: 50%;
+              padding: 4px;
+              margin-left: 8px;
+              text-align: center;
+              vertical-align: middle;
+            "
+            >&#xf39e;</span
+          >
+          <span
+            style="
+              font-family: 'Font Awesome 5 Brands';
+              display: inline-block;
+              background-color: white;
+              line-height: 28px;
+              width: 28px;
+              border-radius: 50%;
+              padding: 4px;
+              margin-left: 8px;
+              text-align: center;
+              vertical-align: middle;
+            "
+            >&#xf39e;</span
+          >
+          <span
+            style="
+              font-family: 'Font Awesome 5 Brands';
+              display: inline-block;
+              background-color: white;
+              line-height: 28px;
+              width: 28px;
+              border-radius: 50%;
+              padding: 4px;
+              margin-left: 8px;
+              text-align: center;
+              vertical-align: middle;
+            "
+            >&#xf39e;</span
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- End of Footer Section -->
+  </mj-body>
+</mjml>
